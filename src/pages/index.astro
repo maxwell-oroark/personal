@@ -1,12 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import profilePictureRef from "../assets/web_pp.jpeg"
 ---
 
 <Layout title="Welcome to me.">
   <main class="max-w-screen-sm mx-auto">
-    <h1 class="text-gradient text-center">Maxwell Douglas O'Roark</h1>
+    <h1 class="text-gradient text-center">Maxwell Douglas O'Roark<span class="blink">&nbsp;</span></h1>
 	<h3 class="text-lg text-center">Software Engineer</h3>
+	<div class="flex justify-center">
+		<img class="w-56 h-52" src={profilePictureRef} />
+	</div>
+
     <p class="instructions">
       To get started, open the directory <code>src/pages</code> in your project.<br
       />
@@ -73,6 +78,16 @@ import Card from "../components/Card.astro";
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
-    padding: 0;
+    padding: 
+	0;
   }
+  @keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  .blink {
+    background-color: rgba(116,127,224,.65);
+    animation: blink 1s steps(1) infinite;
+  }
+
 </style>
