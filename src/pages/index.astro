@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Max's Portfolio">
-  <nav class="flex justify-end p-10 mb-10">
+  <nav class="flex justify-end p-10">
     <div class="flex justify-between nav-links text-xl font-extralight">
       <div class="link-container p-4 text-center">
         <a href="/#about">About me</a>
@@ -19,20 +19,20 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </nav>
-  <main class="px-5">
+  <main class="p-5">
     <section id="about">
       <div class="flex">
         <h1>Maxwell O'Roark</h1>
         <div id="about-cursor" class="active-cursor"></div>
       </div>
     </section>
-    <section id="tech">
-      <h1>Technologies I ❤️</h1>
-      <div id="tech-cursor"></div>
-    </section>
     <section id="projects">
       <h1>Projects</h1>
       <div id="projects-cursor"></div>
+    </section>
+    <section id="tech">
+      <h1>Technologies I ❤️</h1>
+      <div id="tech-cursor"></div>
     </section>
     <section id="likes">
       <h1>Things I like</h1>
@@ -40,6 +40,9 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <div class="flex justify-center"></div>
   </main>
+  <footer class="p-5 mt-[200px]">
+    <p class="text-center text-sm text-gray-500">Made by max © 2022</p>
+  </footer>
 </Layout>
 
 <style>
@@ -62,15 +65,15 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     height: 50vh;
   }
-  h1 {
+  section h1 {
     font-family: Monaco, Consolas, Lucida Console, monospace;
-    font-size: 3em;
+    font-size: 2em;
     color: #747fe0;
   }
   h1::before {
     content: ">\A0";
   }
-  a {
+  nav a {
     font-family: "MavenPro", monospace;
     color: #747fe0;
   }
@@ -83,13 +86,10 @@ import Layout from "../layouts/Layout.astro";
   .link-container:hover {
     border-color: #747fe0;
   }
-  .inactive-cursor {
-    display: none;
-  }
   .active-cursor {
-    margin-left: 10px;
-    width: 15px;
-    height: 60px;
+    margin-left: 5px;
+    width: 25px;
+    height: 45px;
     background-color: #747fe0;
     animation: cursor-blink 1.25s steps(2) infinite;
   }
