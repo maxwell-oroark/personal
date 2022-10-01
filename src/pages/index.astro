@@ -1,57 +1,100 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import profilePictureRef from "../assets/web_pp.jpeg"
 ---
 
-<Layout title="Welcome to me.">
-  <main class="max-w-screen-sm mx-auto">
-    <h1 class="text-gradient text-center">Maxwell Douglas O'Roark</h1>
-	<h3 class="text-lg text-center">Software Engineer</h3>
-	<div class="flex justify-center">
-		<img class="w-56 h-52 rounded-full overflow-hidden" src={profilePictureRef} />
-	</div>
+<Layout title="Max's Portfolio">
+  <nav class="flex justify-end p-10 mb-10">
+    <div class="flex justify-between nav-links text-xl font-extralight">
+      <div class="link-container p-4 text-center">
+        <a href="/#about">About me</a>
+      </div>
+      <div class="link-container p-4 text-center">
+        <a href="/#tech">Technologies</a>
+      </div>
+      <div class="link-container p-4 text-center">
+        <a href="/#projects">Projects</a>
+      </div>
+      <div class="link-container p-4 text-center">
+        <a href="/#likes">Likes</a>
+      </div>
+    </div>
+  </nav>
+  <main class="px-5">
+    <section id="about">
+      <div class="flex">
+        <h1>Maxwell O'Roark</h1>
+        <div id="about-cursor" class="active-cursor"></div>
+      </div>
+    </section>
+    <section id="tech">
+      <h1>Technologies I ❤️</h1>
+      <div id="tech-cursor"></div>
+    </section>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div id="projects-cursor"></div>
+    </section>
+    <section id="likes">
+      <h1>Things I like</h1>
+      <div id="likes-cursor"></div>
+    </section>
+    <div class="flex justify-center"></div>
   </main>
 </Layout>
 
 <style>
+  @font-face {
+    font-family: "MavenPro";
+    src: url("/MavenPro.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @keyframes cursor-blink {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  section {
+    display: flex;
+    height: 50vh;
+  }
   h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin: 0;
+    font-family: Monaco, Consolas, Lucida Console, monospace;
+    font-size: 3em;
+    color: #747fe0;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
+  h1::before {
+    content: ">\A0";
   }
-  .instructions {
-    line-height: 1.6;
-    margin: 1rem 0;
-    border: 1px solid rgba(var(--accent), 25%);
-    background-color: white;
-    padding: 1rem;
-    border-radius: 0.4rem;
+  a {
+    font-family: "MavenPro", monospace;
+    color: #747fe0;
   }
-  .instructions code {
-    font-size: 0.875em;
-    font-weight: bold;
-    background: rgba(var(--accent), 12%);
-    color: rgb(var(--accent));
-    border-radius: 4px;
-    padding: 0.3em 0.45em;
+  .link-container {
+    display: flex;
+    justify-content: center;
+    border-bottom: 8px solid rgba(0, 0, 0, 0);
+    transition: border-color 0.25s;
   }
-  .instructions strong {
-    color: rgb(var(--accent));
+  .link-container:hover {
+    border-color: #747fe0;
   }
-  .link-card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 
-	0;
+  .inactive-cursor {
+    display: none;
   }
-
+  .active-cursor {
+    margin-left: 10px;
+    width: 15px;
+    height: 60px;
+    background-color: #747fe0;
+    animation: cursor-blink 1.25s steps(2) infinite;
+  }
 </style>
+
+<script>
+  import "../index.js";
+</script>
