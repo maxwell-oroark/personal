@@ -17,12 +17,12 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </nav>
   <main class="px-32 max-w-screen-xl">
-    <section class="flex-col text-xl text-gray-500" id="about">
+    <section id="about">
       <div class="flex items-center mb-5">
         <h1 class="section-header">Maxwell O'Roark</h1>
         <div id="about-cursor" class="active-cursor"></div>
       </div>
-      <p>
+      <p class="text-gray-500">
         Hi 👋, I am a software engineer at BlueSky Resources. Most of my
         experience involves helping solve geospatial 🌎 challenges. I enjoy
         building tools that solve novel problems of all shapes and sizes and
@@ -30,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
         On the fortunate occasions where it all comes together, it feels like
         building tiny super powers. ⚡
       </p>
-      <p>
+      <p class="text-gray-500">
         Feel free to check out some examples <a
           class="text-mdo-purple"
           href="/#projects">below</a
@@ -38,16 +38,25 @@ import Layout from "../layouts/Layout.astro";
       </p>
     </section>
     <section id="projects">
-      <h1 class="section-header">Projects</h1>
-      <div id="projects-cursor"></div>
+      <div class="flex items-center mb-5">
+        <h1 class="section-header">Projects</h1>
+        <div id="projects-cursor"></div>
+      </div>
+      <div class="filler"></div>
     </section>
     <section id="tech">
-      <h1 class="section-header">Favorite Technologies</h1>
-      <div id="tech-cursor"></div>
+      <div class="flex items-center mb-5">
+        <h1 class="section-header">Favorite Technologies</h1>
+        <div id="tech-cursor"></div>
+      </div>
+      <div class="filler"></div>
     </section>
     <section id="likes">
-      <h1 class="section-header">Things I like</h1>
-      <div id="likes-cursor"></div>
+      <div class="flex items-center mb-5">
+        <h1 class="section-header">Things I like</h1>
+        <div id="likes-cursor"></div>
+      </div>
+      <div class="filler"></div>
     </section>
     <div class="flex justify-center"></div>
   </main>
@@ -74,18 +83,20 @@ import Layout from "../layouts/Layout.astro";
   }
   section {
     display: flex;
-    height: 50vh;
+    flex-direction: column;
     font-family: "MavenPro";
+    margin: 15px 0;
   }
   .section-header {
     font-family: Monaco, Consolas, Lucida Console, monospace;
-    font-size: 2.25em;
+    font-size: 2.5em;
     color: #747fe0;
   }
-  .section-header h1::before {
+  h1.section-header::before {
     content: ">\A0";
   }
   p {
+    font-size: 1.15em;
     margin: 15px 0;
     line-height: 40px;
   }
@@ -108,6 +119,9 @@ import Layout from "../layouts/Layout.astro";
     height: 45px;
     background-color: #747fe0;
     animation: cursor-blink 1.25s steps(2) infinite;
+  }
+  .filler {
+    height: 25vh;
   }
 </style>
 
