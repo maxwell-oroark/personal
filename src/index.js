@@ -1,5 +1,3 @@
-console.log("hello world");
-
 const ids = ["about", "tech", "projects", "likes"];
 
 window.addEventListener("scroll", () => {
