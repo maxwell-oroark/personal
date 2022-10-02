@@ -9,33 +9,44 @@ import Layout from "../layouts/Layout.astro";
         <a href="/#about">About me</a>
       </div>
       <div class="link-container p-4 text-center">
-        <a href="/#tech">Technologies</a>
-      </div>
-      <div class="link-container p-4 text-center">
         <a href="/#projects">Projects</a>
       </div>
       <div class="link-container p-4 text-center">
-        <a href="/#likes">Likes</a>
+        <a href="/#tech">Technologies</a>
       </div>
     </div>
   </nav>
-  <main class="p-5">
-    <section id="about">
-      <div class="flex">
-        <h1>Maxwell O'Roark</h1>
+  <main class="px-32 max-w-screen-xl">
+    <section class="flex-col text-xl text-gray-500" id="about">
+      <div class="flex items-center mb-5">
+        <h1 class="section-header">Maxwell O'Roark</h1>
         <div id="about-cursor" class="active-cursor"></div>
       </div>
+      <p>
+        Hi 👋, I am a software engineer at BlueSky Resources. Most of my
+        experience involves helping solve geospatial 🌎 challenges. I enjoy
+        building tools that solve novel problems of all shapes and sizes and
+        exposing the full power of those tools with clean sensical interfaces.
+        On the fortunate occasions where it all comes together, it feels like
+        building tiny super powers. ⚡
+      </p>
+      <p>
+        Feel free to check out some examples <a
+          class="text-mdo-purple"
+          href="/#projects">below</a
+        >.
+      </p>
     </section>
     <section id="projects">
-      <h1>Projects</h1>
+      <h1 class="section-header">Projects</h1>
       <div id="projects-cursor"></div>
     </section>
     <section id="tech">
-      <h1>Technologies I ❤️</h1>
+      <h1 class="section-header">Favorite Technologies</h1>
       <div id="tech-cursor"></div>
     </section>
     <section id="likes">
-      <h1>Things I like</h1>
+      <h1 class="section-header">Things I like</h1>
       <div id="likes-cursor"></div>
     </section>
     <div class="flex justify-center"></div>
@@ -64,14 +75,19 @@ import Layout from "../layouts/Layout.astro";
   section {
     display: flex;
     height: 50vh;
+    font-family: "MavenPro";
   }
-  section h1 {
+  .section-header {
     font-family: Monaco, Consolas, Lucida Console, monospace;
-    font-size: 2em;
+    font-size: 2.25em;
     color: #747fe0;
   }
-  h1::before {
+  .section-header h1::before {
     content: ">\A0";
+  }
+  p {
+    margin: 15px 0;
+    line-height: 40px;
   }
   nav a {
     font-family: "MavenPro", monospace;
