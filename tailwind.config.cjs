@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "mdo-purple": "#747fe0",
+        "lilac-100": "#747fe0",
+        "lilac-200": "#4352d5",
       },
     },
   },

@@ -14,6 +14,9 @@ import Layout from "../layouts/Layout.astro";
       <div class="link-container py-1 mx-4 text-center">
         <a href="/#tech">Technologies</a>
       </div>
+      <div class="link-container py-1 mx-4 text-center">
+        <a href="/#links">Links</a>
+      </div>
     </div>
   </nav>
   <main class="px-32 max-w-screen-lg">
@@ -51,18 +54,25 @@ import Layout from "../layouts/Layout.astro";
       </div>
       <div class="filler"></div>
     </section>
-    <section id="likes">
+    <section id="links">
       <div class="flex items-center mb-5">
-        <h1 class="section-header">Things I like</h1>
-        <div id="likes-cursor"></div>
+        <h1 class="section-header">Links</h1>
+        <div id="links-cursor"></div>
       </div>
+      <a
+        class="bg-lilac-100 hover:bg-lilac-200 text-white font-bold w-[175px] py-2 px-4 rounded"
+        href="maxwell_oroark.pdf"
+        download
+      >
+        Download Resume
+      </a>
       <div class="filler"></div>
     </section>
     <div class="flex justify-center"></div>
   </main>
   <footer class="p-3 mt-[200px]">
     <p class="text-center text-sm text-gray-500">
-      Made by max © 2022. Leverages <a href="https://astro.build">Astro</a> for speed
+      Made by max © 2022. Leverages <a href="https://astro.build">Astro</a> for ⚡
     </p>
   </footer>
 </Layout>

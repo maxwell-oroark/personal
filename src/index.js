@@ -1,4 +1,4 @@
-const ids = ["about", "tech", "projects", "likes"];
+const ids = ["about", "tech", "projects", "links"];
 
 window.addEventListener("scroll", () => {
   ids.forEach((id) => {
