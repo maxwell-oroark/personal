@@ -8,10 +8,10 @@ export interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card flex">
-  <img src="stockfish.png" />
+<li class="link-card flex rounded-sm mt-[15px]">
+  <img class="rounded-l-sm h-56" src="stockfish.png" />
   <div class="p-5">
-    <a href="https://github.com/maxwell-oroark/chess-cloud">
+    <a href="https://github.com/maxwell-oroark/chess-cloud" target="_blank">
       <h2>
         {title}
         <span>&rarr;</span>
@@ -29,7 +29,6 @@ const { href, title, body } = Astro.props;
     background-color: white;
     background-image: var(--accent-gradient);
     background-size: 400%;
-    border-radius: 0.5rem;
     background-position: 100%;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
