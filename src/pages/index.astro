@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Max's Portfolio">
@@ -45,6 +46,11 @@ import Layout from "../layouts/Layout.astro";
         <h1 class="section-header">Projects</h1>
         <div id="projects-cursor"></div>
       </div>
+      <Card
+        title="Chess Cloud"
+        body="While you play online chess games, chess-cloud crunches through them asynchronously with stockfish and generates useful analytic reports"
+        href="stockfish.png"
+      />
       <div class="filler"></div>
     </section>
     <section id="tech">
