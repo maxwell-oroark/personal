@@ -21,11 +21,11 @@ const { href, title, body, technologies } = Astro.props;
     <p>
       {body}
     </p>
-    <div class="flex space-x-2 mt-auto self-end">
+    <div class="flex space-x-1 w-full md:space-x-2 mt-auto self-end">
       {
         technologies.map((technology) => {
           return (
-            <div class="p-2 text-sm rounded-sm bg-fuchsia-200 text-fuchsia-800">
+            <div class="p-1 sm:p-2 text-xs md:text-sm rounded-sm bg-fuchsia-200 text-fuchsia-800">
               {technology}
             </div>
           );
