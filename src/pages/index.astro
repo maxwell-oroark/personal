@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
@@ -50,6 +51,14 @@ import Card from "../components/Card.astro";
         title="Chess Cloud"
         body="While you play online, chess-cloud runs in the background asynchronously, evaluating your performance with the stockfish chess engine, generating useful analytic reports."
         href="stockfish.png"
+        technologies={[
+          "Python",
+          "Docker",
+          "Cloud Run",
+          "Cloud Functions",
+          "Cloud Tasks",
+          "Cloud Storage",
+        ]}
       />
       <div class="filler"></div>
     </section>
@@ -66,11 +75,12 @@ import Card from "../components/Card.astro";
         <div id="links-cursor"></div>
       </div>
       <a
-        class="bg-lilac-100 hover:bg-lilac-200 text-white font-bold w-[175px] py-2 px-4 rounded"
+        class="bg-lilac-100 hover:bg-lilac-200 text-white font-bold py-2 px-4 rounded flex items-center w-[150px]"
         href="maxwell_oroark.pdf"
         download
       >
-        Download Resume
+        <Icon class="h-5 w-5 mr-2" name="icon-park-outline:download-one" />
+        Resume
       </a>
       <div class="filler"></div>
     </section>
