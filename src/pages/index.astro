@@ -29,11 +29,11 @@ import Card from "../components/Card.astro";
       </div>
       <p class="text-gray-500">
         Hi 👋, I am a software engineer at BlueSky Resources. Most of my
-        experience as a developer involves solving geospatial 🌎 challenges at
-        scale. I enjoy building tools that solve novel problems of all shapes
-        and sizes and exposing the full power of those tools with clean
-        intuitive interfaces. On the occasions where it all comes together, it
-        feels like building tiny super powers. ⚡
+        experience as a developer centers around solving geospatial 🌎
+        challenges at scale. I enjoy building tools that solve novel problems of
+        all shapes and sizes and exposing the full power of those tools with
+        clean intuitive interfaces. On the occasions where it all comes
+        together, it feels like building tiny super powers. ⚡
       </p>
       <p class="text-gray-500">
         Feel free to check out some examples of my work <a
@@ -44,13 +44,14 @@ import Card from "../components/Card.astro";
     </section>
     <section id="projects">
       <div class="flex items-center mb-5">
-        <h1 class="section-header">Projects</h1>
+        <h1 class="section-header">Recent Projects</h1>
         <div id="projects-cursor"></div>
       </div>
       <Card
         title="Chess Cloud"
         body="While you play online, chess-cloud runs in the background asynchronously, evaluating your performance with the stockfish chess engine, generating useful analytic reports."
-        href="stockfish.png"
+        src="stockfish.png"
+        href="https://github.com/maxwell-oroark/chess-cloud"
         technologies={[
           "Python",
           "Docker",
