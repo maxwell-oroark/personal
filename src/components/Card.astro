@@ -10,8 +10,8 @@ export interface Props {
 const { title, body, src, href, technologies } = Astro.props;
 ---
 
-<li class="link-card flex rounded-sm mt-[15px]">
-  <img class="hidden sm:block rounded-l-sm h-56" src={src} />
+<li class="link-card flex rounded-sm mt-[15px] mb-10 max-h-56">
+  <img class="hidden sm:block rounded-l-sm h-56 w-40" src={src} />
   <div class="flex flex-col p-5">
     <a href={href} target="_blank">
       <h2>
