@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import CircleLink from "../components/CircleLink.astro";
 ---
 
 <Layout title="Max's Portfolio">
@@ -29,17 +30,14 @@ import Card from "../components/Card.astro";
       </div>
       <p class="text-gray-500">
         Hi 👋, I am a software engineer at BlueSky Resources. Most of my
-        experience as a developer centers around solving geospatial 🌎
-        challenges at scale. I enjoy building tools that solve novel problems of
-        all shapes and sizes and exposing the full power of those tools with
-        clean intuitive interfaces. On the occasions where it all comes
+        professional experience centers around solving geospatial 🌎 challenges
+        at scale. But I also enjoy building tools that solve novel problems of
+        all shapes and sizes. I enjoy exposing the full power of those tools
+        with clean intuitive interfaces. On the occasions where it all comes
         together, it feels like building tiny super powers. ⚡
       </p>
       <p class="text-gray-500">
-        Feel free to check out some examples of my work <a
-          class="text-mdo-purple"
-          href="/#projects">below</a
-        >.
+        Below you will find some side projects I've been hacking on lately.
       </p>
     </section>
     <section id="projects">
@@ -78,19 +76,32 @@ import Card from "../components/Card.astro";
       <div class="filler"></div>
     </section>
     <section id="links">
-      <div class="flex items-center mb-5">
+      <div class="flex items-center mb-12">
         <h1 class="section-header">Links</h1>
         <div id="links-cursor"></div>
       </div>
-      <a
-        class="bg-lilac-100 hover:bg-lilac-200 text-white font-bold py-2 px-4 rounded flex items-center w-[150px]"
-        href="maxwell_oroark.pdf"
-        download
-      >
-        <Icon class="h-5 w-5 mr-2" name="icon-park-outline:download-one" />
-        Resume
-      </a>
-      <div class="filler"></div>
+      <div class="flex w-full space-x-5">
+        <CircleLink
+          title="resume"
+          href="maxwell_oroark.pdf"
+          icon="ion:document-text"
+        />
+        <CircleLink
+          title="github"
+          href="https://github.com/maxwell-oroark"
+          icon="entypo-social:github"
+        />
+        <CircleLink
+          title="linkedin"
+          href="https://www.linkedin.com/in/maxwelloroark/"
+          icon="entypo-social:linkedin"
+        />
+        <CircleLink
+          title="email"
+          href="mailto:m.d.oroark@gmail.com"
+          icon="ion:mail-sharp"
+        />
+      </div>
     </section>
     <div class="flex justify-center"></div>
   </main>
