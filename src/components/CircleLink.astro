@@ -13,8 +13,8 @@ const { title, href, icon } = Astro.props;
     target="_blank"
     href={href}
     title={title}
-    class="w-32 h-32 flex flex-col justify-center items-center rounded-full border border-lilac-100"
+    class="w-32 h-32 flex flex-col justify-center items-center rounded-full border border-lilac-100 text-lilac-100 hover:text-white hover:bg-lilac-100"
   >
-    <Icon class="h-20 w-20 text-lilac-100" name={icon} />
+    <Icon class="h-20 w-20" name={icon} />
   </a>
 </div>
